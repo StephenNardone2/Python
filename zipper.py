@@ -5,7 +5,10 @@ from threading import Thread
 def extractFile(zFile, password):
     try:
         zFile.extractall(pwd=password)
-        print '[+] Found password: ' + password + '\n'
+            ''' filecmp.cmp(f1, f2[, shallow] need an if statment to compare
+                the files extracted with the files in the zip
+            '''
+            print '[+] Found password: ' + password + '\n'
     except:
         pass
 
