@@ -1,6 +1,6 @@
 import mechanize, cookielib, random, time
 
-class anonBrowser(mechanize.Browser()):
+class anonBrowser(mechanize.Browser):
     def __init__(self, proxies = [], user_agents = []):
         mechanize.Browser.__init__(self)
         self.set_handle_robots(False)
@@ -8,7 +8,7 @@ class anonBrowser(mechanize.Browser()):
         self.user_agents = user_agents + ['Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36']
         self.cookie_jar = cookielib.LWPCookieJar()
         self.set_cookiejar(self.cookie_jar)
-        self.anonymizer()
+        self.anonymize()
     def clear_cookies(self):
         self.cookie_jar = cookielib.LWPCookieJar()
         self.set_cookiejar(self.cookie_jar)

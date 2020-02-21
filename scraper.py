@@ -1,6 +1,6 @@
-from anonBrowser import *
+import anonBrowser
 
-ab = anonBrowser(proxies=[], user_agents=[('User-agent', 'superSecretBrowser')])
+ab = anonBrowser.anonBrowser(proxies=[], user_agents=[('User-agent', 'superSecretBrowser')])
 for attempt in range(1, 5):
     ab.anonymize()
     print('[*] Fetching page')
