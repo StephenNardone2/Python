@@ -1,4 +1,4 @@
-import mechanize, cookielib, random
+import mechanize, cookielib, random, time
 
 class anonBrowser(mechanize.Browser()):
     def __init__(self, proxies = [], user_agents = []):
